@@ -80,23 +80,23 @@
         var nomal_texture = new THREE.Texture();
         var loader = new THREE.ImageLoader(manager);
         var plyloader = new THREE.PLYLoader();
-        plyloader.load('models/gl5/body.ply', function (geometry) {
+        plyloader.load('models/GL5/body.ply', function (geometry) {
          
             var material = new THREE.MeshPhongMaterial({  specular: 0xaaaaaa, side:THREE.DoubleSide, vertexColores:THREE.VertexColors });
             var mesh = new THREE.Mesh(geometry, material);
             mesh.position.set(0, 0, 0);
             scene.add(mesh);
         });
-        loader.load('models/gl5/merge3d.jpg', function (image) {
+        loader.load('models/GL5/merge3d.jpg', function (image) {
             texture.image = image;
             texture.needsUpdate = true;
         });
-        loader.load('models/gl5/merge3d_NRM.jpg', function (image) {
+        loader.load('models/GL5/merge3d_NRM.jpg', function (image) {
             nomal_texture.image = image;
             nomal_texture.needsUpdate = true;
         });
         var loader = new THREE.OBJLoader();
-        loader.load('models/gl5/merge3d.obj', function (object) {
+        loader.load('models/GL5/merge3d.obj', function (object) {
             objf = object;
             object.position.set(0, 0, 0);
             scene.add(object);
